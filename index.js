@@ -12,7 +12,7 @@ function bowlingScore(frames) {
             if (i === frame.length - 1) {
                 frame = frame[i].split('')
                 for (let j = 0; j < frame.length; j++) {
-                    !isNaN(frame[j]) && frame[j+1] !== '/'? score = score + parseInt(frame[j]) 
+                    !isNaN(frame[j]) && frame[j+1] !== '/' ? score = score + parseInt(frame[j]) 
                     : frame[j] === 'X' || frame[j] === '/' ? score = score + 10 
                     : null
                 }
@@ -20,7 +20,7 @@ function bowlingScore(frames) {
                 !isNaN(frame[i]) ? score = score + parseInt(frame[i][0]) + parseInt(frame[i][1])
                 : frame[i].includes('X') && !isNaN(frame[i+1]) ? score = score + 10 + parseInt(frame[i+1][0]) + parseInt(frame[i+1][1]) 
                 : frame[i].includes('/') && !isNaN(frame[i+1]) ? score = score + 10 + parseInt(frame[i+1][0])
-                : null 
+                : null
             }
         }
     }
@@ -30,7 +30,7 @@ function bowlingScore(frames) {
 // Numerical
 console.log(bowlingScore('11 11 11 11 11 11 11 11 11 11'), 20)
 console.log(bowlingScore('15 27 81 43 26 05 16 22 13 43'), 66)
-console.log(bowlingScore('15 27 81 43 26 05 16 22 13 43'), 66)
+console.log(bowlingScore('15 27 81 43 43 26 05 16 22 31'), 66)
 // Numerical w/ Strikes
 console.log(bowlingScore('X 11 11 11 X 11 11 11 11 11'), 40)
 console.log(bowlingScore('X 15 17 43 X 17 36 62 11 00'), 82)
