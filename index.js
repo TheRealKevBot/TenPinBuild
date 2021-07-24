@@ -44,35 +44,3 @@ console.log(bowlingScore('/ 21 34 52 / 71 90 32 45 5/X'), 97)
 console.log(bowlingScore('X 15 17 43 X 17 36 / 62 3/X'), 116)
 // Perfect Game
 console.log(bowlingScore('X X X X X X X X X XXX'), 300)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function bowlingScore(frames) {
-//     let score = 0
-//     let frame = frames.split(' ')
-//     if(frames.replace(/\s/g, "") === 'XXXXXXXXXXXX'){
-//         score = 300
-//     } else {
-//         for (let i = 0; i < frame.length; i++) { 
-//             !isNaN(frame[i]) ? score = score + ( parseInt(frame[i][0]) + parseInt(frame[i][1]) )
-//             : frame[i].includes('X') && !isNaN(frame[i+1]) ? score = score + 10 + parseInt(frame[i+1][0]) + parseInt(frame[i+1][1]) 
-//             : frame[i].includes('/') && !isNaN(frame[i+1]) ? score = score + 10 + parseInt(frame[i+1][0])
-//             : frame[i] === 'XXX' ? score = score + 30
-//             : null 
-//         }
-//     }
-//     return score
-// }
